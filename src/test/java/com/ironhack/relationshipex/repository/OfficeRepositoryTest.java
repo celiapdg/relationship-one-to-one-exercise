@@ -32,11 +32,11 @@ class OfficeRepositoryTest {
     }
 
     @Test
-    void findByFacultyFirstName(){
-        List<Office> officeList = officeRepository.findByFacultyFirstName("Pepe");
+    void findByFacultyLastName(){
+        List<Office> officeList = officeRepository.findByFacultyLastName("Escobar");
         if (officeList.get(0)!=null){
             assertEquals("C1", officeList.get(0).getBuilding());
-            assertEquals("Escobar", officeList.get(0).getFaculty().getLastName());
+            assertEquals("Pepe", officeList.get(0).getFaculty().getFirstName());
         }else{
             fail();
         }

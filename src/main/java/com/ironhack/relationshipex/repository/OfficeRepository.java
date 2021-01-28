@@ -8,5 +8,5 @@ import java.util.*;
 
 @Repository
 public interface OfficeRepository extends JpaRepository<Office, Integer> {
-    public List<Office> findByFacultyFirstName(String name);
+    public List<Office> findByFacultyLastName(String name);
 }
